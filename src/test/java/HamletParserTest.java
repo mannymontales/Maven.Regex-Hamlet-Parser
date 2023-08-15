@@ -15,10 +15,32 @@ public class HamletParserTest {
 
     @Test
     public void testChangeHamletToLeon() {
+        setUp();
+        boolean expected = true;
+        boolean actual;
+
+        String finalString = hamletParser.calculateFinalString(hamletText);
+        if (finalString.contains("Hamlet")){
+            actual = false;
+        } else {
+            actual = true;
+        }
+        assertEquals(expected, actual);
     }
 
     @Test
     public void testChangeHoratioToTariq() {
+        setUp();
+        boolean expected = true;
+        boolean actual;
+
+        String finalString = hamletParser.calculateFinalString(hamletText);
+        if (finalString.contains("Horatio")){
+            actual = false;
+        } else {
+            actual = true;
+        }
+        assertEquals(expected, actual);
     }
 
     @Test
